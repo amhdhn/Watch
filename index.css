@@ -1,22 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
-@font-face {
-    font-family: "Beirut";
-    src: url("font/Far_Beirut.ttf");
-}
-
-@font-face {
-    font-family: "Koodak";
-    src: url("font/IRKoodak.ttf");
-}
-
-@font-face {
-    font-family: "iran";
-    src: url("font/iran.ttf");
-}
-
-
-/*assets/img/illustration-working.svg*/
 
 body,
 * {
