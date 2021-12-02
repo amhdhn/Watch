@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+@font-face {
+    font-family: "Beirut";
+    src: url("font/Far_Beirut.ttf");
+}
+
+@font-face {
+    font-family: "Koodak";
+    src: url("font/IRKoodak.ttf");
+}
+
+@font-face {
+    font-family: "iran";
+    src: url("font/iran.ttf");
+}
+
+
+/*assets/img/illustration-working.svg*/
+
+body,
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bgColor: #231d2b;
+    --divHeight: 100px;
+    --width: 100px;
+    --pHeight: 50px
+}
+
+body,
+html {
+    background-color: var(--bgColor);
+    scroll-behavior: smooth;
+}
+
+.timeSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100vh;
+    min-width: 320px;
+    background-color: var(--bgColor);
+}
+
+.secendDiv,
+.minDiv,
+.hourDiv {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .6);
+}
+
+
+/*=================== define timeSection's Div==========================*/
+
+.timeSection p {
+    height: 80px;
+    width: 80px;
+    font: 54px poppins;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 4px;
+}
+
+.topTextp {
+    color: rgb(165, 65, 82);
+    background-color: #2e2b44;
+}
+
+.changeTopTextp {
+    color: rgb(165, 65, 82);
+    background-color: #2e2b44;
+    padding-top: 5px;
+    transition: background-color .3s, transform .3s;
+}
+
+.bottomTextp {
+    color: rgb(212, 85, 106);
+    position: absolute;
+    background-color: #34364f;
+    position: absolute;
+    top: -41px;
+    padding-top: 6px;
+}
+
+.changebottomTextp {
+    color: rgb(212, 85, 106);
+    position: absolute;
+    background-color: #2e2b44;
+    top: -41px;
+    padding-top: 6px;
+    transform: rotateX(-90deg);
+    transition: background-color .3s, transform .3s;
+}
+
+
+/*=================== define timeSection's Div==========================*/
+
+.hourDiv div,
+.minDiv div,
+.secendDiv div {
+    width: 80px;
+    height: 40px;
+    overflow: hidden;
+    cursor: default;
+    position: absolute;
+}
+
+.topText,
+.changeTopText {
+    border-radius: 10px 10px 0 0;
+}
+
+.bottomText,
+.changebottomText {
+    top: 41px;
+    border-radius: 0 0 10px 10px;
+}
+
+.minDiv::before,
+.hourDiv::before,
+.secendDiv::before {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    background-color: #231d2b;
+    content: '';
+    z-index: 999;
+    border-radius: 50%;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.minDiv::after,
+.hourDiv::after,
+.secendDiv::after {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    background-color: #231d2b;
+    content: '';
+    z-index: 999;
+    border-radius: 50%;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+
+.activeFull {
+    font: 35px "material Icons";
+    color: rgb(160, 160, 160, .4);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: background-color .6s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.activeFull:hover {
+    background-color: rgba(255, 255, 255, .06);
+}
+
+@media screen and (min-width:450px) {
+    .secendDiv,
+    .minDiv,
+    .hourDiv {
+        width: 100px;
+        height: 100px;
+    }
+    /*=================== define timeSection's Div==========================*/
+    .timeSection p {
+        height: 100px;
+        width: 100px;
+        font-size: 60px;
+        padding-top: 5px;
+    }
+    .bottomTextp {
+        top: -51px;
+        padding-top: 6px;
+    }
+    .changebottomTextp {
+        top: -51px;
+        padding-top: 6px;
+    }
+    /*=================== define timeSection's Div==========================*/
+    .hourDiv div,
+    .minDiv div,
+    .secendDiv div {
+        width: 100px;
+        height: 50px;
+    }
+    .bottomText,
+    .changebottomText {
+        top: 51px;
+    }
+    .minDiv::after,
+    .hourDiv::after,
+    .secendDiv::after {
+        width: 10px;
+        height: 10px;
+    }
+    .minDiv::before,
+    .hourDiv::before,
+    .secendDiv::before {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media screen and (min-width:700px) {
+    .secendDiv,
+    .minDiv,
+    .hourDiv {
+        width: 150px;
+        height: 150px;
+    }
+    /*=================== define timeSection's Div==========================*/
+    .timeSection p {
+        height: 150px;
+        width: 150px;
+        font-size: 95px;
+        padding-top: 5px;
+    }
+    .bottomTextp {
+        top: -76px;
+        padding-top: 6px;
+    }
+    .changebottomTextp {
+        top: -76px;
+        padding-top: 6px;
+    }
+    /*=================== define timeSection's Div==========================*/
+    .hourDiv div,
+    .minDiv div,
+    .secendDiv div {
+        width: 150px;
+        height: 75px;
+    }
+    .bottomText,
+    .changebottomText {
+        top: 76px;
+    }
+    .minDiv::after,
+    .hourDiv::after,
+    .secendDiv::after {
+        width: 15px;
+        height: 15px;
+    }
+    .minDiv::before,
+    .hourDiv::before,
+    .secendDiv::before {
+        width: 15px;
+        height: 15px;
+    }
+}
